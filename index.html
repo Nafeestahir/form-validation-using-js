@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form validation</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Form</h1>
+        <form id="myform" name="myform" onsubmit="return validateForm()">
+            <div class=" form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first_name" name="first_name" class="fieldvalue">
+                <p id="name" class="error"></p>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last_name" name="last_name" class="fieldvalue">
+                <p id="lname" class="error"></p>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email">
+                <p class="error" id="emailerr"></p>
+
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <p id="Passerr" class="error"></p>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="date" id="age" name="age">
+                <p id="ageerr" class="error"></p>
+
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location">
+                <p id="locationerr" class="error"></p>
+
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <select name="" id="dataselect" onchange="selectNum()">
+
+                </select>
+                <input type="tel" id="phone" name="phone">
+                <p id="phoneerr" class="error"></p>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script
+        src="https://maps.googleapis.com/maps/api/js&libraries=places"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('xnLmDMLEHHzuR8NqP')
+        })();
+    </script>
+</body>
+
+</html>
